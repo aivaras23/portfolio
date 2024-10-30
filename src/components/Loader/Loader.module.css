@@ -1,0 +1,36 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.loading-text {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 50%;
+    height: 15px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--tertiary-color);
+    transition: width 0.1s linear;
+}
+
+.span-text {
+    font-size: 18px;
+    margin-top: 30px;
+    color: var(--secondary-color);
+    text-align: center;
+    max-width: 300px;
+}
+

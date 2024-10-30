@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body,
+body *{
+  margin:0;
+  padding:0;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  background-color: hsl(270, 100%, 10%);
+}
+
+:root{
+  --main-color:hsl(270, 100%, 50%);
+  --secondary-color:hsl(270, 100%, 60%);
+  --tertiary-color:hsl(270, 100%, 70%);
+  --bg-color:hsl(270, 100%, 10%);
+  --shadow-bg-color:hsl(275, 100%, 40%);
+}
+
+html {
+  scroll-behavior: smooth;
+}

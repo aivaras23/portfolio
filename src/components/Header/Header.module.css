@@ -1,0 +1,146 @@
+.header {
+    display:flex;
+    justify-content: space-between;
+    padding:0.5em 5em;
+    background-color: hsl(270, 100%, 5%);
+    font-size: 25px;
+    border-bottom: 2px solid hsl(271, 100%, 10%);
+    box-shadow: 2px 4px 8px hsl(271, 100%, 30%);
+    user-select: none;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-content > span {
+    font-weight: bold;
+    color:hsl(270, 100%, 50%);
+    cursor: pointer;
+    letter-spacing: 5px;
+
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar{
+    display:flex;
+    gap:30px;
+}
+.navbar li {
+    list-style-type: none;
+}
+.navbar a {
+    text-decoration: none;
+    color: hsl(270, 100%, 50%);
+    display: inline-block;
+    transition: filter 0.2s ease;
+    position: relative;
+}
+
+.navbar-content {
+    display:flex;
+    gap:30px;
+}
+
+.highlight {
+    color: hsl(270, 100%, 60%);
+}
+
+.navbar a:hover{
+    filter: brightness(120%);
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width:100%;
+    height:2px;
+    bottom:-5px;
+    left:0;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.navbar a:hover::before{
+    transform: scaleX(1);
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin:4px 0;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.5em 1.5em;
+        flex-direction: column;
+    }
+
+    .navbar {
+        margin-top: 20px;
+    }
+    .navbar-content {
+        opacity: 0;
+        flex-direction: column;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease, opacity 0.5s ease;
+        padding: 0;
+        margin:10px 0;
+    }
+
+    .navbar-content.active {
+        display: flex;
+        opacity: 1;
+    }
+
+
+    .menu-icon {
+        display: flex;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        padding: 0.5em 3em;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navbar {
+        margin-top: 15px;
+    }
+
+    .navbar-content {
+        flex-direction: row;
+        height: auto;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .header {
+        padding: 0.5em 4em;
+    }
+
+    .navbar-content {
+        gap: 25px;
+    }
+}
+

@@ -1,0 +1,122 @@
+.contact-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    min-height: 100vh;
+
+}
+
+.contact-container span {
+    font-size: 4em;
+    letter-spacing: 3px;
+    color: var(--main-color);
+    text-shadow: 2px 4px 8px var(--shadow-bg-color);
+}
+
+.contact-link-list {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-link-list a {
+    width: 20em;
+    text-align: center;
+    background: none;
+    border: 3px solid var(--secondary-color);
+    padding: 0.5em 1em;
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-link-list a > img {
+    width: 40px;
+    position: absolute;
+    left:5px;
+    top:5px;
+    transition: all 0.2s ease;
+    opacity: 1;
+}
+
+.contact-link-list a:hover {
+    color: var(--bg-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 5px 3px var(--secondary-color);
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.2);
+    }
+
+    60% {
+        opacity: 0.8;
+        transform: translateY(10px) scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible-up {
+    visibility: visible;
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@media (max-width: 768px) {
+    .contact-container span {
+        font-size: 3em;
+    }
+    .contact-link-list a {
+        width: 12em;
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact-container {
+        gap: 80px;
+    }
+
+    .contact-container span {
+        font-size: 3.5em;
+    }
+
+    .contact-link-list a {
+        width: 16em;
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .contact-container {
+        gap: 90px;
+    }
+
+    .contact-container span {
+        font-size: 3.8em;
+    }
+
+    .contact-link-list a {
+        width: 18em;
+        font-size: 1.45em;
+    }
+}
