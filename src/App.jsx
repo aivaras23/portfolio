@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import Header from "./components/header/header"
+import Header from "./components/Header/Header"
 import Home from './components/Home/Home'
 import About from "./components/About/About"
 import Contact from "./components/Contact/Contact"
